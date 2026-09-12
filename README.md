@@ -1,54 +1,123 @@
-StockWise Inventory Management System
-Status
+# StockWise — Inventory Management System
 
-StockWise is a modern, cloud-based inventory management application designed to help businesses track stock levels, manage products, and monitor sales in real-time. Built with performance and scalability in mind, it leverages Supabase for a robust backend and is hosted globally via Google Cloud (Firebase).
+StockWise is a modern, cloud-based inventory management application that helps businesses track stock levels, manage products, and monitor sales in real time. Built with performance and scalability in mind using React, Supabase, and Firebase.
 
-🚀 Tech Stack
-Frontend: React (TypeScript) + Vite
-Styling: Tailwind CSS
-Backend & Database: Supabase (PostgreSQL)
-Authentication: Supabase Auth
-Hosting: Firebase Hosting (Google Cloud)
-CI/CD: GitHub Actions
+![StockWise Dashboard](https://via.placeholder.com/900x400?text=StockWise+Dashboard)
 
-✨ Features
-Real-time Dashboard: View stock levels and sales updates instantly.
-Product Management: Add, edit, delete, and categorize inventory items.
-Secure Authentication: User login and signup handled securely via Supabase.
-Low Stock Alerts: Visual indicators for items running low.
-Responsive Design: Works seamlessly on desktop and mobile devices.
-🛠️ Getting Started
-Follow these instructions to set up the project locally on your machine.
+---
 
-Prerequisites
-Node.js (v18 or higher)
-npm or yarn
-A Supabase account
-Installation
-Clone the repository:
+## ✨ Features
 
-git clone [https://github.com/ujeneza12/StockWise.git]
+- **Real-time Dashboard** — Stock levels and sales updates the moment they change
+- **Product Management** — Add, edit, delete, and categorize inventory items with ease
+- **Low Stock Alerts** — Visual indicators flag items running low before they run out
+- **Secure Authentication** — User login and signup handled securely via Supabase Auth
+- **Responsive Design** — Works seamlessly on desktop and mobile
+
+---
+
+## 🚀 Tech Stack
+
+| Layer | Technology |
+|---|---|
+| Frontend | React (TypeScript) + Vite |
+| Styling | Tailwind CSS |
+| Backend & Database | Supabase (PostgreSQL) |
+| Authentication | Supabase Auth |
+| Hosting | Firebase Hosting (Google Cloud) |
+| CI/CD | GitHub Actions |
+
+---
+
+## 🛠️ Getting Started
+
+### Prerequisites
+
+- Node.js v18 or higher
+- npm or yarn
+- A [Supabase](https://supabase.com) account
+
+### Installation
+
+1. **Clone the repository**
+
+```bash
+git clone https://github.com/ujeneza12/stockwise.git
 cd stockwise
-Install dependencies:
+```
 
+2. **Install dependencies**
+
+```bash
 npm install
-Configure Environment Variables: Create a .env file in the root directory and add your Supabase credentials:
+```
 
+3. **Set up environment variables**
+
+Create a `.env` file in the root directory and add your Supabase credentials:
+
+```env
 VITE_SUPABASE_URL=your_supabase_project_url
 VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
-Run the application:
+```
 
+4. **Start the development server**
+
+```bash
 npm run dev
-The app should now be running at http://localhost:5173.
+```
 
-📦 Deployment
-This project is configured for Continuous Deployment using GitHub Actions and Firebase Hosting.
+The app will be running at `http://localhost:5173`
 
-How it works:
-Preview Channels: When a Pull Request is created, a temporary preview URL is generated to test changes.
-Live Site: When code is merged into the main branch, it is automatically built and deployed to the live URL.
-Manual Deployment:
-If you need to deploy manually from your local machine:
+---
 
+## 📦 Deployment
+
+This project uses **GitHub Actions** for continuous deployment to Firebase Hosting.
+
+| Trigger | Result |
+|---|---|
+| Pull Request opened | Preview URL generated for testing |
+| Merge to `main` | Automatically deployed to live site |
+
+**Manual deployment:**
+
+```bash
 npm run build
 firebase deploy
+```
+
+---
+
+## 📁 Project Structure
+
+```
+stockwise/
+├── src/
+│   ├── components/     # Reusable UI components
+│   ├── pages/          # Application pages
+│   ├── lib/            # Supabase client and utilities
+│   └── main.tsx        # Entry point
+├── public/
+├── .env                # Environment variables (not committed)
+├── vite.config.ts
+└── README.md
+```
+
+---
+
+## 🔐 Environment Variables
+
+| Variable | Description |
+|---|---|
+| `VITE_SUPABASE_URL` | Your Supabase project URL |
+| `VITE_SUPABASE_ANON_KEY` | Your Supabase anonymous public key |
+
+> Never commit your `.env` file. Make sure it is listed in `.gitignore`.
+
+---
+
+## 👤 Author
+
+**Ujeneza Divine**
+[github.com/ujeneza12](https://github.com/ujeneza12) · ujenezadivine@gmail.com
